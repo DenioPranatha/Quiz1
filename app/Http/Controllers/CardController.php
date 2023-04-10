@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class CardController extends Controller
 {
     //
-    public function index(){
+    public function index(String $nama){
         $cards = [
             [
                 'name' => 'Zakaria',
@@ -47,6 +47,15 @@ class CardController extends Controller
             ]
             ];
 
-            return view('card', compact('cards'));
+            $new_card = [];
+            foreach($cards as $card){
+                if($card['name'] == $nama){
+                    $new_card = $card;
+                }
+            }
+
+            return view('card', compact('new_card'));
+
+
     }
 }

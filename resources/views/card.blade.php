@@ -1,7 +1,13 @@
 @extends('main')
 
+
+
 <?php $det = $new_card["detail"]  ?>
-@section('title', 'Product | {{$det}}')
+@section('detail')
+    <meta name="viewport" content="{{$det}}">
+@endsection
+
+@section('title', 'Card')
 
 @section('content')
     <div>

@@ -1,7 +1,10 @@
 @extends('main')
 
-@section('title', 'Products | {{ $cards }}')
+@section('detail')
+    <meta name="viewport" content="{{ $cards[0]['detail'] }}">
+@endsection
 
+@section('title', 'Products')
 @section('content')
     <div>
     @foreach ($cards as $card)
